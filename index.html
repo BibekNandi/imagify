@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="gallery-title">Explore your visuals with Imagify <i class="fa-solid fa-mug-hot"></i></h1>
+
+         <input type="text" id="search" placeholder="Search for images..." /> 
+             </header>
+        <main>
+        <div id="gallery" class="gallery"></div>
+    </main>
+    <div id="modal" class="modal" style="display: none;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content-wrapper">
+            <img id="modalImage" class="modal-content" />
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalAuthor"></p>
+                <button id="downloadButton">Download</button>
+                <button id="favoriteButton" onclick="toggleFavorite()">Favorite</button>
+                <button id="shareButton" onclick="shareImage()">Share</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 imagify. All rights reserved.</p>
+        <p>Images sourced from <a href="https://pixabay.com" target="_blank">Pixabay</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
